@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drink2Go</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body class="page__body">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><svg fill="none" id="basket" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.66 3.875.234 2.792h4.213l.232-2.792a2.347 2.347 0 1 0-4.678 0Zm5.784 2.792.224-2.68a3.68 3.68 0 1 0-7.336 0l.224 2.68H0L.19 8l.816 5.71A2.667 2.667 0 0 0 3.646 16h8.708a2.667 2.667 0 0 0 2.64-2.29L15.81 8 16 6.667h-4.556ZM11.334 8h-.054l-.222 2.667h3.024L14.462 8h-3.129ZM9.941 8H6.058l.222 2.667h3.44L9.942 8ZM4.72 8H1.537l.381 2.667h3.024L4.72 8Zm1.893 6.667L6.391 12H9.61l-.222 2.667H6.613ZM10.947 12l-.222 2.667h1.629c.663 0 1.226-.488 1.32-1.145L13.89 12h-2.944Zm-5.894 0 .222 2.667H3.646a1.333 1.333 0 0 1-1.32-1.145L2.11 12h2.944Z" fill="#333"></path></svg><svg fill="none" id="user" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.667 4a2.667 2.667 0 1 1-5.334 0 2.667 2.667 0 0 1 5.334 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.803 8.31C4.437 11.277 6.16 10.667 8 10.667s3.564.61 4.803 1.643c1.232 1.027 1.864 2.362 1.864 3.69H16c0-1.768-.843-3.464-2.343-4.714-1.5-1.25-3.535-1.953-5.657-1.953s-4.157.703-5.657 1.953S0 14.232 0 16h1.333c0-1.328.632-2.663 1.864-3.69Z" fill="#333"></path></svg></svg>
+
+    <header class="header">
+      <!-- main-nav--opened | main-nav--closed | main-nav--nojs -->
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__wrapper">
+          <a class="main-nav__logo">
+            <picture>
+              <source media="(min-width:1440px)" srcset="img/svg/logo-desktop.svg">
+              <source media="(min-width:768px)" srcset="img/svg/logo-tablet.svg">
+              <img src="img/svg/logo.svg" width="32" height="36" alt="Логотип Drink2Go">
+            </picture>
+          </a>
+          <h1 class="main-nav__slogan">Интернет-магазин кофейных напитков</h1>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <svg class="user-list__link-icon" width="16" height="16">
+                  <use xlink:href="#user"></use>
+                </svg>
+                <span class="user-list__link-text">Войти</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <svg class="user-list__link-icon" width="16" height="16">
+                  <use xlink:href="#basket"></use>
+                </svg>
+                <span class="user-list__link-text">Корзина</span>
+              </a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Доставка</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <main class="main"></main>
+      <footer class="footer">
+        <p class="footer__info-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente delectus pariatur perferendis unde maiores, numquam, labore sequi reprehenderit ipsam et quidem harum assumenda est error minus molestias adipisci iure? Dolorum?</p>
+      </footer>
+    </div>
+
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>

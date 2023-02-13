@@ -1,0 +1,44 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__wrapper {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  padding: 0 0 0 20px;
+  margin: 0 auto;
+}
+
+.main-nav__slogan {
+  display: none;
+  font-family: $montserrat-regular;
+  font-size: 12px;
+  line-height: 16;
+}
+
+.main-nav__toggle {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 16px;
+  height: 12px;
+  cursor: pointer;
+  border: none;
+  background-position: center;
+  background-color: transparent;
+  min-width: 60px;
+  min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  width: 16px;
+  height: 12px;
+  background-image: url("/img/svg/burger.svg");
+  background-repeat: no-repeat;
+}
