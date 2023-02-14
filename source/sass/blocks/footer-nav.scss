@@ -1,0 +1,27 @@
+.footer-nav__item {
+  padding-bottom: 8px;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.footer-nav__title {
+  font-family: $montserrat-bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primary;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav__list-item {
+  font-family: $montserrat-medium;
+  font-size: 12px;
+  line-height: 16px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  list-style: none;
+}

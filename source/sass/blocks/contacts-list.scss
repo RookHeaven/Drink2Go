@@ -1,0 +1,18 @@
+.contacts-list {
+  padding-bottom: 13px;
+}
+
+.contacts-list__item {
+  font-family: $montserrat-medium;
+  font-size: 14px;
+  line-height: 20px;
+  padding-bottom: 4px;
+  text-transform: none;
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+
+.contacts-list__list-text {
+  padding-bottom: 20px;
+}

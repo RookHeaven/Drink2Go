@@ -1,5 +1,28 @@
 .main-nav {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
+  }
+}
+
+.main-nav__logo {
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
 }
 
 .main-nav__wrapper {
@@ -8,13 +31,23 @@
   width: 320px;
   padding: 0 0 0 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
 }
 
 .main-nav__slogan {
   display: none;
   font-family: $montserrat-regular;
   font-size: 12px;
-  line-height: 16;
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 170px;
+    margin-right: 115px;
+  }
 }
 
 .main-nav__toggle {

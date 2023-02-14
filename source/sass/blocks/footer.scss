@@ -2,7 +2,27 @@
   flex: 0 0 auto;
 }
 
-.footer__info-text {
-  background-color: $base-black;
-  color: $white;
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $base-secondary;
+  padding: 21px 0 18px 0;
+}
+
+.footer__slogan {
+  display: none;
+}
+
+.footer__copyright{
+  font-family: $montserrat-regular;
+  color: $base-grey;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 206px;
+  margin: 0 auto;
+  padding: 20px 0 30px;
 }

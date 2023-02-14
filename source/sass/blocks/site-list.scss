@@ -5,6 +5,18 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 420px;
+    margin: 0 0 0 auto;
+    flex-direction: row;
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    max-width: 500px;
+  }
 }
 
 .site-list__item {
@@ -12,11 +24,25 @@
   width: 100%;
   text-align: center;
   border-top: 1px solid $base-secondary;
-  padding: 20px;
-  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
 }
 
 .site-list__link {
+  display: block;
+  padding: 20px;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 18px 20px 24px;
+  }
 }
