@@ -1,15 +1,53 @@
+.footer-nav {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    margin-left: 63px;
+  }
+}
+
 .footer-nav__item {
   padding-bottom: 8px;
   border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    border: 0;
+    padding: 0;
+
+    &--contacts {
+      padding-bottom: 4px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .footer-nav__title {
   font-family: $montserrat-bold;
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 0.02em;
   color: $base-primary;
   margin: 0;
   padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .footer-nav__list {
@@ -22,6 +60,11 @@
   font-size: 12px;
   line-height: 16px;
   padding-bottom: 20px;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
 }

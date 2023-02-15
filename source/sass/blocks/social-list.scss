@@ -5,6 +5,12 @@
   width:  150px;
   margin: 0;
   padding: 0 10px 0 0;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 10px;
+    padding: 0;
+    width: 140px;
+  }
 }
 
 .social-list__item {

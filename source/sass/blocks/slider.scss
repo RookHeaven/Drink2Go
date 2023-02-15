@@ -1,0 +1,126 @@
+.slider {
+  position: relative;
+  // padding: 20px 0 60px;
+}
+
+.slider__list {
+  padding: 0;
+  margin: 0;
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+
+  &--white {
+    background-color: $flat-white;
+  }
+
+  &--violet {
+    background-color: $lavender-latte;
+  }
+
+  &--black {
+    background-color: $espresso;
+  }
+}
+
+.slider__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider__badge {
+  font-family: $montserrat-bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-primary;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.slider__heading {
+  font-family: $montserrat-bold;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.slider__description {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px 20px;
+}
+
+.slider__buy {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.slider__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__old-price {
+  font-family: $montserrat-regular;
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+  padding-right: 5px;
+}
+
+.slider__price {
+  font-family: $montserrat-semi-bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.slider__button {
+  font-family: $montserrat-regular;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: $base-primary;
+  color: $white;
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 328px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  z-index: 1;
+  color: transparent;
+  border: 0;
+  background-color: transparent;
+
+  &--left {
+    left: 0;
+    background-image: url("/img/svg/arrow-left.svg");
+  }
+
+  &--right {
+    right: 0;
+    background-image: url("/img/svg/arrow-right.svg");
+  }
+}
+
+.slider__bullet {
+  display: none;
+}
