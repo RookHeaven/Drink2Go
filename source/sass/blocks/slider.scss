@@ -1,11 +1,19 @@
 .slider {
   position: relative;
-  // padding: 20px 0 60px;
 }
 
 .slider__list {
   padding: 0;
   margin: 0;
+  max-height: 828px;
+
+  @media (min-width: $tablet-width) {
+    max-height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .slider__item {
@@ -13,17 +21,68 @@
   flex-direction: column;
   align-items: center;
   list-style: none;
+  padding: 20px 0 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    padding: 0 0 80px 0;
+  }
 
   &--white {
     background-color: $flat-white;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg,$flat-white 77%,transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $flat-white;
+    }
   }
 
   &--violet {
     background-color: $lavender-latte;
+    padding-bottom: 80px;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg,$lavender-latte 70%,transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $lavender-latte;
+    }
   }
 
   &--black {
     background-color: $espresso;
+    padding-bottom: 80px;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(180deg,$espresso 70%,transparent 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $espresso;
+    }
+  }
+
+}
+
+.slider__item-img {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin: 29px 0 0 105px;
   }
 }
 
@@ -31,25 +90,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    align-items: flex-start;
+    padding-bottom: 0;
+    margin-left: 135px;
+    margin-top: 17px;
+  }
 }
 
 .slider__badge {
   font-family: $montserrat-bold;
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: 0.04em;
   color: $base-primary;
   text-transform: uppercase;
-  padding-top: 10px;
+  padding-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .slider__heading {
   font-family: $montserrat-bold;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.02em;
   text-align: center;
   margin: 0;
   padding-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 16px;
+  }
 }
 
 .slider__description {
@@ -59,6 +148,18 @@
   text-align: center;
   margin: 0;
   padding: 10px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 15px 85px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .slider__buy {
@@ -79,7 +180,7 @@
   line-height: 32px;
   color: $base-primary;
   text-decoration: line-through;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .slider__price {
@@ -113,14 +214,63 @@
   &--left {
     left: 0;
     background-image: url("/img/svg/arrow-left.svg");
+
+    @media (min-width: $tablet-width) {
+      left: 30px;
+      top: 320px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 30px;
+      top: 357px;
+    }
   }
 
   &--right {
     right: 0;
     background-image: url("/img/svg/arrow-right.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 30px;
+      top: 320px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 30px;
+      top: 357px;
+    }
   }
 }
 
-.slider__bullet {
+.slider__bullets {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 87%;
+    right: 0;
+    margin-left: 8px;
+  }
+}
+
+.swiper-pagination-bullet {
   display: none;
+  border-radius: 0;
+  opacity: 1;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    content: "";
+    width: 62px;
+    height: 4px;
+    background-color: $white;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary;
+  border-radius: 0;
 }

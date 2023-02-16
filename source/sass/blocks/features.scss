@@ -1,0 +1,135 @@
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 80px;
+  }
+}
+
+.features__tittle {
+  font-family: $montserrat-bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: $base-primary;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.features__subtittle {
+  font-family: $montserrat-bold;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    padding-bottom: 0;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 27px;
+    grid-row-gap: 45px;
+    padding: 55px 10px 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4,1fr);
+    padding: 80px 0 96px;
+  }
+}
+
+.features__item {
+  text-align: center;
+  padding-bottom: 32px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+.features__item-img {
+  @media (min-width: $tablet-width) {
+    margin-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
+    margin-top: 0;
+  }
+}
+
+.features__item-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-left: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.features__heading {
+  font-family: $montserrat-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 5px 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+}
+
+.features__description {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
