@@ -1,0 +1,12 @@
+#map {
+  width: 100%;
+  min-height: 420px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+  }
+}

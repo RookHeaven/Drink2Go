@@ -1,0 +1,55 @@
+.card {
+  background-color: $white;
+  padding: 20px;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.card__tittle {
+  font-family: $montserrat-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.card__description {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 0 15px;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card__price {
+  font-family: $montserrat-semi-bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  min-height: 36px;
+  padding: 8px 20px;
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  background-color: $base-primary;
+  border-radius: 4px;
+}
