@@ -3,10 +3,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     width: 768px;
     padding: 0 20px;
     margin: 0 auto;
+    min-height: 80px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,6 +19,9 @@
 .main-nav__logo {
   @media (min-width: $tablet-width) {
     order: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,7 +50,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     width: 170px;
-    margin-right: 115px;
+    margin-top: 24px;
   }
 }
 
@@ -57,12 +61,15 @@
   display: block;
   width: 16px;
   height: 12px;
-  cursor: pointer;
   border: none;
   background-position: center;
   background-color: transparent;
   min-width: 60px;
   min-height: 60px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -74,4 +81,30 @@
   height: 12px;
   background-image: url("/img/svg/burger.svg");
   background-repeat: no-repeat;
+}
+
+.main-nav--opened .main-nav__toggle {
+  width: 18px;
+  height: 21px;
+  background-image: url("/img/svg/close-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+.main-nav--closed .site-list__item {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

@@ -1,6 +1,10 @@
 .available-list {
   margin: 23px 0 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 19px 0 0;
+  }
 }
 
 .available-list__item {
@@ -13,6 +17,7 @@
 
 .available-list__label {
   padding-left: 34px;
+  cursor: pointer;
 }
 
 .available-list__radio {

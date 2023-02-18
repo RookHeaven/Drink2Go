@@ -16,6 +16,22 @@
       margin-right: 23px;
     }
   }
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+
+    @media (min-width: $tablet-width) {
+      color: $base-primary;
+      }
+  }
 }
 
 .user-list__link {
@@ -29,6 +45,12 @@
     padding: 0 20px;
     min-width: 112px;
     min-height: 80px;
+  }
+}
+
+.user-list__link-icon {
+  path {
+    fill: currentColor;
   }
 }
 

@@ -3,14 +3,9 @@
   font-size: 12px;
   line-height: 16px;
   background-color: $white;
-  padding: 0 0 8px;
+  padding: 0 0 2px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 12px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 1px;
-    padding-bottom: 0;
+    padding: 0;
   }
 }

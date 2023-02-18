@@ -1,6 +1,10 @@
 .card {
   background-color: $white;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
 }
 
 .card__link {
@@ -8,6 +12,11 @@
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
 }
 
 .card__tittle {
@@ -16,6 +25,11 @@
   line-height: 32px;
   margin: 0;
   padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .card__description {
@@ -24,6 +38,10 @@
   line-height: 20px;
   margin: 0;
   padding: 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 4px 0 19px;
+  }
 }
 
 .card__buy {

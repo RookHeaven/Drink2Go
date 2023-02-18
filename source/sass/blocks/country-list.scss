@@ -1,6 +1,10 @@
 .country-list {
   margin: 22px 0 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 19px 0 0;
+  }
 }
 
 .country-list__item {
@@ -13,6 +17,7 @@
 
 .country-list__label {
   padding-left: 54px;
+  cursor: pointer;
 }
 
 .country-list__input {

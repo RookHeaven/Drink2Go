@@ -8,13 +8,14 @@
 
   @media (min-width: $tablet-width) {
     max-width: 420px;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 67px;
     flex-direction: row;
     order: 1;
+    align-items: flex-end;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
+    margin-left: 119px;
     max-width: 500px;
   }
 }
@@ -25,7 +26,24 @@
   text-align: center;
   border-top: 1px solid $base-secondary;
 
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+
+    @media (min-width: $tablet-width) {
+    color: $base-primary;
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    border-bottom: 2px solid transparent;
     border-top: none;
   }
 
@@ -40,9 +58,15 @@
   display: block;
   padding: 20px;
   text-transform: uppercase;
-  cursor: pointer;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
-    padding: 17px 18px 20px 24px;
+    padding: 14px 20px 30px 20px;
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $base-primary;
+    }
   }
 }

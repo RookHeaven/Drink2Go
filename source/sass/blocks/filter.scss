@@ -1,3 +1,18 @@
+.filter__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+    "price fieldsets"
+    "buttons buttons";
+    grid-template-columns: 230px 1fr;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .filter__heading {
   font-family: $montserrat-semi-bold;
@@ -12,11 +27,27 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 31px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .filter__range-scale {
   height: 2px;
   background-color: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
 }
 
 .filter__range-bar {
@@ -26,6 +57,14 @@
   left: 0;
   width: 241px;
   background-color: $primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 189px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
 }
 
 .filter__range-toggles {
@@ -50,12 +89,26 @@
   &--max {
     right: 20px;
     top: -11px;
+
+    @media (min-width: $tablet-width) {
+      right: 23px;
+    }
   }
 }
 
 .filter__price {
   margin-bottom: 24px;
   width: 280px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: price;
+    width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+    margin-bottom: 31px;
+  }
 }
 
 .filter__price-controls {
@@ -63,6 +116,10 @@
   display: flex;
   justify-content: space-between;
   padding-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+  }
 }
 
 .filter__price-control {
@@ -76,8 +133,31 @@
   padding: 5px 6px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    margin-right: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+
   &--min {
     color: $base-grey;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &--max {
+    @media (min-width: $desktop-width) {
+      margin-right: 2px;
+    }
   }
 }
 
@@ -88,12 +168,38 @@
   top: 24px;
   left: 136px;
   background-color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    top: 21px;
+    left: 112px;
+  }
+}
+
+.filter__fieldsets {
+
+
+  @media (min-width: $tablet-width) {
+    grid-area: fieldsets;
+    display: flex;
+    gap: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .filter__fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+
+  &--country {
+    @media (min-width: $desktop-width) {
+      margin-top: 7px;
+    }
+  }
 }
 
 .filter__buttons {
@@ -101,11 +207,31 @@
   flex-direction: column;
   align-items: center;
   margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: buttons;
+    margin-top: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .filter__buttons-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-right: 52px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    gap: 18px;
+  }
 }
 
 .filter__button {
@@ -117,15 +243,37 @@
   border: 0;
   border-radius: 4px;
 
+  @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+  }
+
   &--apply {
     font-size: 13px;
     color: $white;
     background-color: $base-primary;
     margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      width: 149px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 150px;
+    }
   }
 
   &--reset {
     color: $base-primary;
     background-color: $white;
+
+    @media (min-width: $tablet-width) {
+      width: 138px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 150px;
+    }
   }
 }
