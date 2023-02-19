@@ -46,3 +46,21 @@ const map = new L.map('map', mapOptions);
 const layer = new L.TileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=StFld3NCrvag1TMtL9m1');
 
 map.addLayer(layer);
+
+const iconOptions = {
+  iconUrl: '/img/svg/map-pin.svg',
+  iconSize: [38, 50],
+  iconAnchor: [18, 50]
+}
+
+const customIcon = L.icon(iconOptions);
+
+var markerOptions = {
+  clickable: true,
+  draggable: true,
+  icon: customIcon
+}
+
+const marker = L.marker({lat: 59.96819, lng: 30.31713}, markerOptions);
+
+marker.addTo(map);
