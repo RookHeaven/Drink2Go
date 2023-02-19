@@ -22,6 +22,18 @@
   padding: 0;
 }
 
+.filter__range {
+  &--disabled {
+    .filter__range-bar {
+      background-color: $base-grey;
+    }
+
+    .filter__range-toggle {
+      border: 2px solid $base-grey;
+    }
+  }
+}
+
 .filter__range-controls {
   position: relative;
   border-radius: 5px;

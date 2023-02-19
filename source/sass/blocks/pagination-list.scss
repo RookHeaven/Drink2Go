@@ -36,47 +36,10 @@
     width: auto;
   }
 
-  &--prev {
-    &::before {
-      content: "";
-      display: inline-block;
-      border: solid $base-primary;
-      border-width: 0 2px 2px 0;
-      padding: 3px;
-      transform: rotate(135deg);
-      position: absolute;
-      pointer-events: none;
-      left: 47%;
-
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
-    }
-  }
-
   &--current {
     background-color: $background-grey;
     color: $base-black;
   }
-
-  &--next {
-    &::before {
-      content: "";
-      display: inline-block;
-      border: solid $base-primary;
-      border-width: 0 2px 2px 0;
-      padding: 3px;
-      transform: rotate(-45deg);
-      position: absolute;
-      pointer-events: none;
-      right: 47%;
-
-      @media (min-width: $tablet-width) {
-        display: none;
-      }
-    }
-  }
-
 }
 
 .pagination-list__link {
@@ -87,6 +50,7 @@
   height: 40px;
   padding: 5px;
   cursor: pointer;
+  border-radius: 4px;
 
   &:hover,
   &:focus {
@@ -96,6 +60,20 @@
 
   &:active {
     background-color: $primary-darker;
+  }
+
+  &--disabled {
+    background-color: $light-grey;
+    color: $white;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-grey;
+      color: $white;
+      cursor: not-allowed;
+    }
   }
 
   &--prev {
@@ -112,6 +90,24 @@
 
   &--current {
     cursor: auto;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: $base-black;
+      cursor: auto;
+    }
+  }
+}
+
+.pagination-list__link-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--next {
+    transform: rotate(180deg);
   }
 }
 
