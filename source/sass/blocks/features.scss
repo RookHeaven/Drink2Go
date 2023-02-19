@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 80px;
+    padding-top: 82px;
   }
 }
 
@@ -56,14 +56,14 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 27px;
     grid-row-gap: 45px;
     padding: 55px 10px 101px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 80px 0 119px;
   }
 }

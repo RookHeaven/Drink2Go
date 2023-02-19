@@ -2,8 +2,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-areas:
-    "price fieldsets"
-    "buttons buttons";
+      "price fieldsets"
+      "buttons buttons";
     grid-template-columns: 230px 1fr;
     column-gap: 20px;
   }
@@ -107,7 +107,7 @@
     }
   }
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     top: 50%;
@@ -121,14 +121,14 @@
 
   &:hover,
   &:focus {
-    &:after {
+    &::after {
       background-color: $base-primary;
       opacity: 0.25;
     }
   }
 
   &:active {
-    &:after {
+    &::after {
       background-color: $base-primary;
       opacity: 1;
     }
