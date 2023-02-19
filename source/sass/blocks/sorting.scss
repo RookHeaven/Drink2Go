@@ -56,9 +56,22 @@
   background-image: url("/img/svg/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: 87% 50%;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     padding-left: 10px;
     background-position: 94% 50%;
-    }
   }
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+}
+
+.sorting__control {
+  font-family: $montserrat-regular;
+  color: $base-black;
+  font-size: 16px;
+  line-height: 24px;
+}
