@@ -10,16 +10,9 @@
   @media (min-width: $tablet-width) {
     max-height: 828px;
   }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 20px;
-  }
 }
 
 .slider__item {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   list-style: none;
   padding: 18px 0 59px;
   min-height: 654px;
@@ -83,7 +76,7 @@
     display: grid;
     grid-template-columns: 600px 1fr;
     gap: 30px;
-    padding-bottom: 81px;
+    padding-bottom: 79px;
     justify-items: flex-start;
   }
 }
@@ -96,7 +89,7 @@
   @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
-    margin: 29px 0 0 14px;
+    margin: 29px 0 0 21px;
   }
 }
 
@@ -114,7 +107,7 @@
     align-items: flex-start;
     justify-content: center;
     padding-bottom: 0;
-    margin-left: 12px;
+    margin-left: 21px;
     margin-top: 18px;
   }
 }
@@ -220,71 +213,83 @@
 
 .slider__arrows {
   @media (min-width: $tablet-width) {
-     position: absolute;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    margin: 0 auto;
-    max-width: $tablet-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
+    bottom: 0;
   }
 }
 
 .slider__arrow {
   position: absolute;
-  top: 328px;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  margin: 0;
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center;
-  z-index: 1;
-  color: transparent;
-  border: 0;
+  background-size: 100%;
+  background-position: 100%;
   background-color: transparent;
+  z-index: 1;
+  border: 0;
 
-  &--left {
+  &::after {
+    content: "";
+    position: absolute;
     left: 0;
-    background-image: url("/img/svg/arrow-left.svg");
-
-    @media (min-width: $tablet-width) {
-      left: 30px;
-      top: 320px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 27px;
-      top: 357px;
-    }
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("/img/svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: center;
+    background-color: transparent;
+    z-index: 2;
   }
 
   &--right {
     right: 0;
-    background-image: url("/img/svg/arrow-right.svg");
+    left: unset;
+    transform: rotate(180deg);
+  }
 
-    @media (min-width: $tablet-width) {
-      right: 30px;
-      top: 320px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 77.5%;
+  }
 
-    @media (min-width: $desktop-width) {
-      right: 27px;
-      top: 357px;
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    &::after {
+      background-image: url("/img/svg/arrow-grey.svg");
     }
   }
 }
 
 .slider__bullets {
   @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 89.5%;
+    right: 0;
     display: flex;
     justify-content: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 87%;
-    right: 0;
     margin-left: 8px;
   }
 }

@@ -1,6 +1,11 @@
-#map {
+.map {
   width: 100%;
   min-height: 420px;
+  position: relative;
+  background-image: url("img/bg-map-mobile@1x.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 0;
 
   @media (min-width: $tablet-width) {
     min-height: 480px;

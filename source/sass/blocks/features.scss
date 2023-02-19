@@ -1,3 +1,9 @@
+.features {
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+  }
+}
+
 .features__wrapper {
   display: flex;
   flex-direction: column;

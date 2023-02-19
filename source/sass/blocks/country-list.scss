@@ -34,19 +34,24 @@
 
 /* Checked */
 .country-list__input:checked + .country-list__checkbox {
-  background: url("/img/svg/checkbox-checked.svg") no-repeat 0 0;
+  background-image: url("/img/svg/checkbox-checked.svg");
 }
 
 /* Focused */
 .country-list__input:not(:checked):hover + .country-list__checkbox {
-  background: url("/img/svg/checkbox-hover-focus.svg") no-repeat 0 0;
+  background-image: url("/img/svg/checkbox-hover-focus.svg");
 }
 
 /* Disabled */
 .country-list__input:disabled + .country-list__checkbox {
-  background: url("/img/svg/checkbox-disabled.svg") no-repeat 0 0;
+  background-image: url("/img/svg/checkbox-disabled.svg");
 }
 
 .country-list__input:not(:checked):disabled + .country-list__checkbox {
-  background: url("/img/svg/checkbox-unchecked-disabled.svg") no-repeat 0 0;
+  background-image: url("/img/svg/checkbox-unchecked-disabled.svg");
+}
+
+.country-list__input:disabled ~ .country-list__text,
+.country-list__input:not(:checked):disabled:hover ~ .country-list__text {
+  color: $base-grey;
 }
