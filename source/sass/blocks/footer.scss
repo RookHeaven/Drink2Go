@@ -1,5 +1,5 @@
 .footer {
-  // flex: 0 0 auto;
+  overflow-x: hidden;
 
   @media (min-width: $desktop-width) {
     display: grid;
@@ -15,22 +15,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid $base-secondary;
   padding: 21px 0 18px 0;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   height: 1px;
-  //   background-color: $base-secondary;
-  //   width: 300%;
-  //   left: calc(1vw - 90%);
-  //   bottom: 0;
-  // }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: $base-secondary;
+    left: calc(0vw - 90%);
+    right: calc(0vw - 90%);
+    bottom: 0;
+    width: auto;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     border: 0;
+
+    &::after {
+      content: none;
+    }
   }
 
   @media (min-width: $desktop-width) {

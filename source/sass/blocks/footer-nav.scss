@@ -14,16 +14,30 @@
 }
 
 .footer-nav__item {
+  position: relative;
   padding-bottom: 8px;
-  border-bottom: 1px solid $base-secondary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: $base-secondary;
+    left: calc(0vw - 90%);
+    right: calc(0vw - 90%);
+    bottom: 0;
+    width: auto;
+  }
 
   @media (min-width: $tablet-width) {
     width: 223px;
-    border: 0;
     padding: 0;
 
     &--contacts {
       padding-bottom: 4px;
+    }
+
+    &::after {
+      content: none;
     }
   }
 
