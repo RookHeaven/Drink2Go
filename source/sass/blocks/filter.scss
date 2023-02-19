@@ -94,6 +94,33 @@
       right: 23px;
     }
   }
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      background-color: $base-primary;
+      opacity: 0.25;
+    }
+  }
+
+  &:active {
+    &:after {
+      background-color: $base-primary;
+      opacity: 1;
+    }
+  }
 }
 
 .filter__price {
@@ -159,25 +186,32 @@
       margin-right: 2px;
     }
   }
+
+  &::placeholder {
+    color: $base-grey;
+  }
+
+  &:focus {
+    border: 2px solid $primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid $light-grey;
+  }
 }
 
 .filter__price-control-divider {
   position: absolute;
   height: 3px;
   width: 9px;
-  top: 24px;
-  left: 136px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: $base-grey;
-
-  @media (min-width: $tablet-width) {
-    top: 21px;
-    left: 112px;
-  }
 }
 
 .filter__fieldsets {
-
-
   @media (min-width: $tablet-width) {
     grid-area: fieldsets;
     display: flex;
