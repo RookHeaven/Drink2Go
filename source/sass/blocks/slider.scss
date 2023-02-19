@@ -209,6 +209,20 @@
   border-radius: 4px;
   background-color: $base-primary;
   color: $white;
+
+  &:not(.slider__button--disabled):hover,
+  &:not(.slider__button--disabled):focus {
+    background-color: $primary-lighter;
+  }
+
+  &:not(.slider__button--disabled):active {
+    background-color: $primary-darker;
+  }
+
+  &--disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
 }
 
 .slider__arrows {
@@ -298,6 +312,12 @@
   display: none;
   border-radius: 0;
   opacity: 1;
+
+  &:not(.swiper-pagination-bullet-active):hover,
+  &:not(.swiper-pagination-bullet-active):focus {
+    background-color: $base-primary;
+    opacity: 0.25;
+  }
 
   @media (min-width: $desktop-width) {
     display: block;

@@ -25,22 +25,6 @@
   text-align: center;
   border-top: 1px solid $base-secondary;
 
-  &:hover {
-    color: $base-primary;
-  }
-
-  &:focus {
-    color: $base-primary;
-  }
-
-  &:active {
-    background-color: $base-secondary;
-
-    @media (min-width: $tablet-width) {
-    color: $base-primary;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid transparent;
     border-top: none;
@@ -66,6 +50,19 @@
   &--active {
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $base-primary;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+
+    @media (min-width: $tablet-width) {
+    color: $base-primary;
     }
   }
 }

@@ -243,6 +243,20 @@
   border: 0;
   border-radius: 4px;
 
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 8px 4px;
   }
@@ -267,6 +281,17 @@
   &--reset {
     color: $base-primary;
     background-color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+      color: $white;
+    }
 
     @media (min-width: $tablet-width) {
       width: 138px;

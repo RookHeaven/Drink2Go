@@ -11,12 +11,14 @@
   font-family: $montserrat-regular;
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 21px;
   list-style: none;
 }
 
 .country-list__label {
+  position: relative;
+  display: block;
   padding-left: 54px;
+  padding-bottom: 21px;
   cursor: pointer;
 }
 
@@ -26,9 +28,10 @@
 
 .country-list__checkbox {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 42px;
   height: 24px;
-  margin-left: -52px;
   background: url("/img/svg/checkbox-unchecked.svg") no-repeat 0 0;
 }
 

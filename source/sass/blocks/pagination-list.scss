@@ -88,6 +88,16 @@
   padding: 5px;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
   &--prev {
     @media (min-width: $tablet-width) {
       padding: 5px 20px;

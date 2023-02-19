@@ -70,4 +70,18 @@
   color: $white;
   background-color: $base-primary;
   border-radius: 4px;
+
+  &:not(.card__button--disabled):hover,
+  &:not(.card__button--disabled):focus {
+    background-color: $primary-lighter;
+  }
+
+  &:not(.card__button--disabled):active {
+    background-color: $primary-darker;
+  }
+
+  &--disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
 }

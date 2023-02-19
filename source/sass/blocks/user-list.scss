@@ -16,6 +16,20 @@
       margin-right: 23px;
     }
   }
+}
+
+.user-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 20px;
+    min-width: 112px;
+    min-height: 80px;
+  }
 
   &:hover {
     color: $base-primary;
@@ -31,20 +45,6 @@
     @media (min-width: $tablet-width) {
       color: $base-primary;
       }
-  }
-}
-
-.user-list__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 60px;
-  min-height: 60px;
-
-  @media (min-width: $desktop-width) {
-    padding: 0 20px;
-    min-width: 112px;
-    min-height: 80px;
   }
 }
 
