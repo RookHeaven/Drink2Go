@@ -1,11 +1,13 @@
 .footer {
   overflow-x: hidden;
+}
 
+.footer__inner {
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-areas:
-        "wrapper nav"
-        "copyright copyright";
+      "wrapper nav"
+      "copyright copyright";
     grid-template-columns: auto 1fr;
   }
 }

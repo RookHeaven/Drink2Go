@@ -1,5 +1,6 @@
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -7,10 +8,9 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-top: 72px;
-    width: 394px;
+    width: 400px;
     margin: 0 0 0 auto;
   }
 
@@ -31,6 +31,10 @@
   border-radius: 4px;
   list-style: none;
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     width: auto;

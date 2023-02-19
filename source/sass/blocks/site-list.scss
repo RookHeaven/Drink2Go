@@ -10,6 +10,7 @@
     max-width: 420px;
     margin: 0 0 0 67px;
     flex-direction: row;
+    flex-wrap: wrap;
     order: 1;
   }
 
@@ -26,6 +27,8 @@
   border-top: 1px solid $base-secondary;
 
   @media (min-width: $tablet-width) {
+    max-width: 100%;
+    width: unset;
     border-top: none;
   }
 
