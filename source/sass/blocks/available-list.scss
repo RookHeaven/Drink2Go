@@ -28,28 +28,28 @@
   left: 0;
   width: 24px;
   height: 25px;
-  background: url("/img/svg/radio-unchecked.svg") no-repeat 0 0;
+  background: url("../../img/svg/radio-unchecked.svg") no-repeat 0 0;
 }
 
 
 /* Checked */
 .available-list__input:checked + .available-list__radio {
-  background-image: url("/img/svg/radio-checked.svg");
+  background-image: url("../../img/svg/radio-checked.svg");
 }
 
 /* Focused */
 .available-list__input:not(:checked):hover + .available-list__radio {
-  background-image: url("/img/svg/radio-hover-focus.svg");
+  background-image: url("../../img/svg/radio-hover-focus.svg");
 }
 
 /* Disabled */
 .available-list__input:disabled + .available-list__radio,
 .available-list__input:disabled:hover + .available-list__radio {
-  background-image: url("/img/svg/radio-disabled.svg");
+  background-image: url("../../img/svg/radio-disabled.svg");
 }
 
 .available-list__input:checked:disabled + .available-list__radio {
-  background-image: url("/img/svg/radio-disabled-checked.svg");
+  background-image: url("../../img/svg/radio-disabled-checked.svg");
 }
 
 .available-list__input:disabled ~ .available-list__text,

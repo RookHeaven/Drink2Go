@@ -79,14 +79,14 @@
 .main-nav--closed .main-nav__toggle {
   width: 16px;
   height: 12px;
-  background-image: url("/img/svg/burger.svg");
+  background-image: url("../../img/svg/burger.svg");
   background-repeat: no-repeat;
 }
 
 .main-nav--opened .main-nav__toggle {
   width: 18px;
   height: 21px;
-  background-image: url("/img/svg/close-icon.svg");
+  background-image: url("../../img/svg/close-icon.svg");
   background-repeat: no-repeat;
 }
 

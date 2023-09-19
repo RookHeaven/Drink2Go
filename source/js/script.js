@@ -48,7 +48,7 @@ const layer = new L.TileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/
 map.addLayer(layer);
 
 const iconOptions = {
-  iconUrl: '/img/svg/map-pin.svg',
+  iconUrl: './img/svg/map-pin.svg',
   iconSize: [38, 50],
   iconAnchor: [18, 50]
 }
